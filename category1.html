@@ -1,1 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category One | Software Design and Engineering</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="resume.html">Resume</a>
+    <a href="self_assessment.html">Self Assessment</a>
+    <a href="enhancement_overview.html">Capstone Overview</a>
+    <a href="final_application.html">Weight Tracker Application</a>
+</nav>
+
+<h1>Category One: Software Design and Engineering</h1>
+
+<div class="section">
+
+    <h2>Enhancement Overview</h2>
+
+    <p>
+        The focus of Category One was improving the overall architecture, maintainability, scalability, and user experience of the Weight Tracker application. While the original CS360 project provided a functional foundation, several areas could be improved through refactoring, workflow redesign, and modernization of the application's structure.
+    </p>
+
+    <p>
+        Throughout this enhancement, I redesigned the authentication system, modernized the dashboard, implemented a centralized settings system, and refactored the application's data architecture into a more scalable DailyRecord model. These improvements transformed the application from a basic course project into a more organized and maintainable software solution.
+    </p>
+
+</div>
+
+<div class="section">
+
+    <h2>Original Application Challenges</h2>
+
+    <ul>
+        <li>Login and registration workflows were tightly coupled.</li>
+        <li>Account management functionality was limited.</li>
+        <li>The dashboard provided minimal feedback and visualization.</li>
+        <li>User preferences and customization options were not available.</li>
+        <li>The original data structure limited future scalability.</li>
+        <li>Workflow organization became increasingly difficult as features expanded.</li>
+    </ul>
+
+</div>
+
+<div class="section">
+
+    <h2>Authentication Redesign</h2>
+
+    <p>
+        One of the largest improvements was the redesign of the authentication system. The original application combined multiple responsibilities within a single workflow, making future expansion difficult. To improve maintainability, authentication features were separated into dedicated activities for login, registration, password recovery, and password reset.
+    </p>
+
+    <p>
+        Additional validation was added to improve account creation and account management workflows. Duplicate username prevention, password confirmation checks, password reset functionality, and improved user feedback created a more realistic authentication experience while maintaining the project's local SQLite architecture.
+    </p>
+
+    <p><strong>Authentication Workflow Screenshots</strong></p>
+    
+    <p>Insert Login</p>
+    <img src="images/Module3.C1/Screenshots/Category One/Phase_1A/New_Login_Screen.png"
+     alt="Enhanced Login Screen"
+     width="300">
+  
+    <p>Registration</p>
+    <img src="images/Module3.C1/Screenshots/Category One/Phase_1A/New_Register_Screen.png"
+     alt="Enhanced Register Screen"
+     width="300">
+
+    <p>Password Reset Screenshots</p>
+    <img src="images/Module3.C1/Screenshots/Category One/Phase_1A/Forgot_Password_Screen.png"
+     alt="Forgot Password Screen"
+     width="300">
+
+</div>
+
+<div class="section">
+
+    <h2>Dashboard Modernization</h2>
+
+    <p>
+        The original dashboard was redesigned to provide a clearer overview of user progress and improve the overall user experience. The updated dashboard introduced a cleaner layout, improved information hierarchy, and a circular progress visualization that provides immediate feedback on goal progress.
+    </p>
+
+    <p>
+        Additional improvements included enhanced navigation, better empty-state handling for new users, improved readability, and more intuitive organization of key health tracking information.
+    </p>
+
+    <p><strong>Dashboard Screenshots</strong></p>
+    
+    <p>Dashboard Before]</p>
+    <img src="images/CS360_homepage.png"
+     alt="Original Dashboard Screen"
+     width="300">
+
+    <p>Enhanced Dashboard]</p>
+    <img src="images/images/Module3.C1/Screenshots/Category One/Phase_2/Updated_Main_Screen.png"
+     alt="Enhanced Dashboard Screen"
+     width="300">
+  
+
+</div>
+
+<div class="section">
+
+    <h2>DailyRecord Architecture Refactor</h2>
+
+    <p>
+        To improve long-term scalability, the original weight-entry architecture was redesigned into a more flexible DailyRecord system. This refactor introduced support for multiple tracking metrics while preserving compatibility with existing application functionality.
+    </p>
+
+    <p>
+        The new architecture improved the relationship between the application's activities, database workflows, and dashboard functionality. It also established a stronger foundation for future enhancements and supported additional tracking capabilities such as calories burned.
+    </p>
+
+    <p><strong>Daily Record Architecture Screenshots</strong></p>
+  
+    <p>Enhanced Daily Record Screen</p>
+    <img src="images/images/Module3.C1/Screenshots/Category One/Phase_3/New_Daily_Screen.png"
+     alt="Enhanced Record Screen"
+     width="300">
+
+    <p>Enhanced Daily Record Dashbaord</p>
+    <img src="images/images/Module3.C1/Screenshots/Category One/Phase_3/Daily_Record_saved.png"
+     alt="Enhanced Record Screen On Dashboard"
+     width="300">
+
+</div>
+
+<div class="section">
+
+    <h2>Settings and User Preferences</h2>
+
+    <p>
+        A centralized Settings system was implemented to improve customization and account management. Users can now manage application preferences, switch between pounds and kilograms, reset progress data, and modify account information directly within the application.
+    </p>
+
+    <p>
+        Persistent preferences were implemented using SharedPreferences, allowing settings to remain consistent between sessions. Additional account management enhancements included username modification, password updates, validation handling, and synchronization of account data across related database tables.
+    </p>
+
+    <p><strong>Settings Screenshots</strong></p>
+
+    <p>Settings Screen</p>
+    <img src="images/images/Module3.C1/Screenshots/Category One/Phase_4/Settings_Page.png"
+     alt="Settings Screen"
+     width="300">
+
+    <p>Change Password Screen</p>
+    <img src="images/images/Module3.C1/Screenshots/Category One/Phase_4/Change_Password.png"
+     alt="Password Change Screen"
+     width="300">
+
+    <p>Resest Progress</p>
+    <img src="images/images/Module3.C1/Screenshots/Category One/Phase_4/Reset_Progress.png"
+     alt="Reset Progress"
+     width="300">
+
+    <p>Unit of Measurement Change</p>
+    <img src="images/images/Module3.C1/Screenshots/Category One/Phase_4/KG_Change_Main_Screen.png"
+     alt="KG Dashboard"
+     width="300">
+
+</div>
+
+<div class="section">
+
+    <h2>Testing and Validation</h2>
+
+    <p>
+        Testing focused on validating all newly introduced workflows and ensuring compatibility with existing application functionality. Verification included user registration, password reset functionality, account management workflows, dashboard calculations, settings persistence, unit conversion, DailyRecord creation, and progress reset operations.
+    </p>
+
+    <p>
+        Additional testing confirmed proper navigation behavior, successful database integration, accurate dashboard updates, and reliable persistence of user preferences across application sessions.
+    </p>
+
+</div>
+
+<div class="section">
+
+    <h2>Reflection</h2>
+
+    <p>
+        This enhancement significantly improved the overall quality of the Weight Tracker application. Rather than simply adding new features, the focus was placed on creating a more maintainable and scalable architecture while improving usability and workflow organization.
+    </p>
+
+    <p>
+        The redesigned authentication system, modernized dashboard, DailyRecord architecture, and centralized settings management established a strong foundation for the additional algorithms and database enhancements completed in Categories Two and Three. This experience reinforced the importance of designing software with future growth, maintainability, and user experience in mind.
+    </p>
+
+</div>
+
+<footer>
+    Caleb Kinjerski | SNHU Computer Science Capstone | <a href="https://github.com/calebkinj/calebkinj.github.io">Github</a>
+</footer>
+
+</body>
+</html>
