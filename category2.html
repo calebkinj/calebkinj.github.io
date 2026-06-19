@@ -1,1 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Two | Algorithms and Data Structures</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="resume.html">Resume</a>
+    <a href="self_assessment.html">Self Assessment</a>
+    <a href="enhancement_overview.html">Capstone Overview</a>
+    <a href="final_application.html">Weight Tracker Application</a>
+</nav>
+
+<h1>Category Two: Algorithms and Data Structures</h1>
+
+<div class="section">
+
+    <h2>Enhancement Overview</h2>
+
+    <p>
+        The focus of Category Two was improving the organization, retrieval, processing, and visualization of historical user data. While the application already allowed users to record DailyRecord entries, there was no effective way to review historical information or identify long-term progress trends.
+    </p>
+
+    <p>
+        To address this limitation, I developed a historical tracking system built around calendar visualization, date-based record retrieval, and monthly analytics processing. These enhancements transformed stored data from simple database records into meaningful information that users could review and analyze over time.
+    </p>
+
+</div>
+
+<div class="section">
+
+    <h2>Original Application Challenges</h2>
+
+    <ul>
+        <li>No historical progress tracking interface.</li>
+        <li>No way to browse previous DailyRecord entries.</li>
+        <li>No visualization of stored tracking data.</li>
+        <li>No trend analysis or performance metrics.</li>
+        <li>Limited value from long-term data collection.</li>
+        <li>No efficient method for reviewing progress over time.</li>
+    </ul>
+
+</div>
+
+<div class="section">
+
+    <h2>Historical Tracking System</h2>
+
+    <p>
+        The largest enhancement introduced during this category was a dedicated History screen that allows users to browse and review previously stored DailyRecord entries. Rather than displaying records in a simple list, historical data is presented through a dynamic calendar interface that makes progress easier to visualize and understand.
+    </p>
+
+    <p>
+        The History screen provides centralized access to historical records while improving usability and long-term progress visibility. Users can navigate between months, review previously recorded data, and analyze progress using information that already exists within the application database.
+    </p>
+
+    <p><strong>History Screen Screenshots</strong></p>
+    
+    <p>History Activity Added to Dashboard</p>
+    <img src="images/Screenshots.C2/View_History_Dashboard_Addition.png"
+     alt="History Dashboard"
+     width="300">
+
+    <p>History Activity Blank Screen</p>
+    <img src="images/Screenshots.C2/View_History_Blank.png"
+     alt="History Dashboard"
+     width="300">
+
+    <p>History Activity Analytics</p>
+    <img src="images/Screenshots.C2/View_History_Selected_Date.png"
+     alt="History Analytics"
+     width="300">
+
+</div>
+
+<div class="section">
+
+    <h2>Dynamic Calendar Generation</h2>
+
+    <p>
+        A custom calendar generation system was developed to organize historical data by month and year. Rather than relying on a built-in Android calendar component, the calendar is generated dynamically at runtime. This approach provided greater flexibility for integrating record highlighting, date selection, and future expansion opportunities.
+    </p>
+
+    <p>
+        Calendar generation requires date calculations, collection traversal, and dynamic user interface updates. The system creates calendar layouts for each month while maintaining proper alignment between calendar dates and stored DailyRecord information.
+    </p>
+
+    <p><strong>Calendar Generation Screenshot</strong></p>
+    <img src="images/Screenshots.C2/generateCalendar().png"
+     alt="generateCalendar()"
+     width="500">
+
+</div>
+
+<div class="section">
+
+    <h2>Record Retrieval and Searching</h2>
+
+    <p>
+        Historical data retrieval was implemented through date-based searching and filtering operations. The application processes DailyRecord collections to identify records that belong to the currently selected month and highlights those dates within the calendar interface.
+    </p>
+
+    <p>
+        Users can select individual dates to retrieve stored weight and calorie information for that specific day. These retrieval workflows demonstrate practical applications of searching, filtering, and collection traversal techniques while improving accessibility of historical information.
+    </p>
+
+    <p><strong>Historical Record Screenshot</strong></p>
+    <img src="images/Screenshots.C2/dayHasRecord().png"
+     alt="dayHasRecord()"
+     width="500">
+
+</div>
+
+<div class="section">
+
+    <h2>Monthly Analytics Processing</h2>
+
+    <p>
+        To increase the value of stored data, monthly analytics were introduced to calculate and summarize historical performance metrics. The application processes DailyRecord collections to calculate average weight, total calories burned, and monthly weight change statistics.
+    </p>
+
+    <p>
+        These calculations transform raw tracking data into meaningful information that users can use to evaluate progress over time. Aggregation operations provide insight into trends and overall performance while maintaining a simple and user-friendly experience.
+    </p>
+
+    <p><strong>Analytics Screenshots</strong></p>
+    <img src="images/Screenshots.C2/updateMonthlyAnalytics().png"
+     alt="updateMonthlyAnalytics()"
+     width="500">
+
+</div>
+
+<div class="section">
+
+    <h2>Algorithms and Data Structures Concepts</h2>
+
+    <p>
+        This enhancement relied heavily on collection-based processing techniques. DailyRecord objects are stored and processed through List-based data structures that support searching, filtering, traversal, and aggregation operations.
+    </p>
+
+    <p>
+        Calendar generation requires traversing collections of DailyRecord objects, filtering records by month and year, mapping matching records to calendar cells, and dynamically updating the user interface. Additional aggregation operations are used to calculate average weight, total calories burned, and weight change metrics.
+    </p>
+
+    <p>
+        These implementations demonstrate practical applications of data structures and algorithmic processing within a real-world Android application environment.
+    </p>
+
+</div>
+
+<div class="section">
+
+    <h2>Testing and Validation</h2>
+
+    <p>
+        Testing focused on verifying proper calendar generation, historical record retrieval, month navigation, and analytics calculations. Validation included confirming correct month transitions, accurate record highlighting, successful selected-date retrieval, and proper calculation of monthly analytics.
+    </p>
+
+    <p>
+        Additional testing verified correct handling of months containing no records, navigation across multiple years, and accurate display of historical progress information. These tests helped ensure reliability of both the calendar visualization system and analytical processing workflows.
+    </p>
+
+</div>
+
+<div class="section">
+
+    <h2>Reflection</h2>
+
+    <p>
+        This enhancement significantly increased the value of the application's stored data by transforming historical records into useful and accessible information. Rather than simply collecting DailyRecord entries, users can now browse previous records, review progress trends, and analyze performance through a centralized historical tracking system.
+    </p>
+
+    <p>
+        The project reinforced the importance of organizing and processing data in ways that provide meaningful insight to users. Through calendar generation, record retrieval, filtering, searching, and analytics processing, this enhancement demonstrated how algorithms and data structures can improve both functionality and user experience.
+    </p>
+
+</div>
+
+<footer>
+    Caleb Kinjerski | SNHU Computer Science Capstone | <a href="https://github.com/calebkinj/calebkinj.github.io">Github</a>
+</footer>
+
+</body>
+</html>
