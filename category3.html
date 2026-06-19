@@ -1,1 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Three | Databases</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="resume.html">Resume</a>
+    <a href="self_assessment.html">Self Assessment</a>
+    <a href="enhancement_overview.html">Capstone Overview</a>
+    <a href="final_application.html">Weight Tracker Application</a>
+</nav>
+
+<h1>Category Three: Databases</h1>
+
+<div class="section">
+
+    <h2>Enhancement Overview</h2>
+
+    <p>
+        The focus of Category Three was expanding the application's database functionality through schema enhancement, database integration, and dynamic content retrieval. While the Weight Tracker application already utilized SQLite for user accounts, goals, and DailyRecord information, the database primarily functioned as a storage mechanism.
+    </p>
+
+    <p>
+        To strengthen the database component of the application, I implemented a database-driven motivational message system. This enhancement required expanding the SQLite schema, performing a database version upgrade, initializing default records, executing randomized queries, and integrating database results directly into the user experience.
+    </p>
+
+</div>
+
+<div class="section">
+
+    <h2>Original Application Challenges</h2>
+
+    <ul>
+        <li>Database functionality was limited primarily to data storage.</li>
+        <li>No dynamic content was generated from database records.</li>
+        <li>No schema expansion beyond core application tables.</li>
+        <li>No demonstration of database version upgrades.</li>
+        <li>No randomized query retrieval functionality.</li>
+        <li>Limited demonstration of advanced SQLite integration concepts.</li>
+    </ul>
+
+</div>
+
+<div class="section">
+
+    <h2>Database Schema Expansion</h2>
+
+    <p>
+        The first step of this enhancement was expanding the SQLite database schema through the addition of a new motivational_messages table. This required increasing the database version and updating the database creation workflow to support the new table structure.
+    </p>
+
+    <p>
+        By storing motivational content within SQLite rather than hardcoding messages directly into application logic, the application became more maintainable and easier to expand in future versions.
+    </p>
+
+    <img src="images/Screenshots.C3/schema_expansion.png"
+         alt="Database Schema Expansion"
+         width="600">
+
+</div>
+
+<div class="section">
+
+    <h2>Database Initialization and Population</h2>
+
+    <p>
+        After creating the new table, an initialization process was implemented to automatically populate the database with default motivational messages. This ensured that motivational content would be available immediately after database creation without requiring user input.
+    </p>
+
+    <p>
+        The insertMotivationalMessages() method inserts a predefined collection of motivational messages into the database during application initialization.
+    </p>
+
+    <img src="images/Screenshots.C3/InsertMotivationalMessages().png"
+         alt="Database Initialization"
+         width="600">
+
+</div>
+
+<div class="section">
+
+    <h2>Randomized Message Retrieval</h2>
+
+    <p>
+        Once messages were stored in SQLite, a retrieval system was developed to return a random motivational message whenever a Daily Record is successfully saved. The retrieval process is performed directly through SQLite using a randomized query.
+    </p>
+
+    <p>
+        This implementation demonstrates SQL query execution, record retrieval, and dynamic database-driven application behavior.
+    </p>
+
+    <img src="images/Screenshots.C3/getRandomMotivationalMessages().png"
+         alt="Randomized Message Retrieval"
+         width="600">
+
+</div>
+
+<div class="section">
+
+    <h2>Application Integration</h2>
+
+    <p>
+        The motivational message system was integrated directly into the Daily Record workflow. When a user saves a Daily Record, the application executes a database query, retrieves a random motivational message, and displays the result using an Android Toast notification.
+    </p>
+
+    <p>
+        This enhancement demonstrates how database functionality can directly contribute to user interaction rather than serving solely as a storage layer.
+    </p>
+
+    <img src="images/Screenshots.C3/Application_Integration.png"
+         alt="Application Integration"
+         width="600">
+
+</div>
+
+<div class="section">
+
+    <h2>Feature Validation</h2>
+
+    <p>
+        Testing verified successful schema expansion, table initialization, randomized query execution, and user interface integration. Multiple Daily Record submissions were performed to confirm that different motivational messages were returned from the database.
+    </p>
+
+    <p>
+        These results confirmed that the database was correctly storing records, retrieving data, and interacting with application workflows as intended.
+    </p>
+
+    <p><strong>Motivational Message Examples</strong></p>
+
+    <img src="images/Screenshots.C3/Success_Message_1.png"
+         alt="Motivational Message Example One"
+         width="350">
+
+    <img src="images/Screenshots.C3/Success_Message_2.png"
+         alt="Motivational Message Example Two"
+         width="350">
+
+</div>
+
+<div class="section">
+
+    <h2>Database Concepts Demonstrated</h2>
+
+    <p>
+        This enhancement demonstrates several important database concepts, including schema evolution, database version management, table creation, record insertion, query execution, randomized retrieval, and application integration.
+    </p>
+
+    <p>
+        Rather than functioning only as a storage mechanism, SQLite became an active component of the application's user experience. The enhancement showcases how databases can support dynamic functionality while maintaining scalability and maintainability.
+    </p>
+
+</div>
+
+<div class="section">
+
+    <h2>Testing and Validation</h2>
+
+    <p>
+        Testing focused on validating successful database creation, schema updates, table population, query execution, and user interface integration. Verification confirmed that motivational messages were inserted during initialization and successfully retrieved through randomized SQL queries.
+    </p>
+
+    <p>
+        Additional testing confirmed that existing application functionality remained operational following the database upgrade, including authentication, goal management, dashboard calculations, historical tracking, and analytics features.
+    </p>
+
+</div>
+
+<div class="section">
+
+    <h2>Reflection</h2>
+
+    <p>
+        This enhancement expanded the role of SQLite within the application by transforming the database from a simple storage solution into an active component of the overall user experience. Through schema expansion, automated data initialization, randomized retrieval, and workflow integration, the application gained new functionality while maintaining compatibility with existing features.
+    </p>
+
+    <p>
+        The project strengthened my understanding of database design, schema management, query execution, and application integration. It also reinforced the importance of designing database solutions that can evolve alongside application requirements over time.
+    </p>
+
+</div>
+
+<div class="section">
+
+    <ul>
+        <li><a href="artifact.html">CS360 Weight Tracker App</a></li>
+        <li><a href="category1.html">Category One: Software Design and Engineering Enhancement</a></li>
+        <li><a href="category2.html">Category Two: Algorithms and Data Structures Enhancement</a></li>
+        <li><a href="final_application.html">Final Enhanced Application</a></li>
+    </ul>
+
+</div>
+
+
+<footer>
+    Caleb Kinjerski | SNHU Computer Science Capstone | <a href="https://github.com/calebkinj/calebkinj.github.io">Github</a>
+</footer>
+
+</body>
+</html>
